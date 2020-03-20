@@ -1,20 +1,17 @@
 {
-  "name": "blessedbot",
+  "name": "deadbot",
   "version": "1.0.0",
-  "description": "Blessed/blursed image bot",
-  "main": "blessedbot.js",
+  "description": "Dead Server Bot",
+  "main": "deadbot.js",
   "dependencies": {
     "discord.js": "^12.0.2",
     "request": "^2.88.2"
   },
   "devDependencies": {},
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "author": "UngluedLion",
   "license": "MIT",
   "repository": {
     "type" : "git",
-    "url" : "https://github.com/UngluedLion/blessedbot.git"
+    "url" : "https://github.com/UngluedLion/deadbot.git"
   }
 }
