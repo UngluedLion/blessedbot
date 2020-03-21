@@ -1,6 +1,8 @@
 {
 	"token": "Bot ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890",
+	"prefix": "?",
 	"blessed_channel": "1234567890",
 	"blessed_avatar": "https://i.imgur.com/example.jpg",
-	"voting_channel": "0987654321"
+	"voting_channel": "0987654321",
+	"needed_votes": 3
 }

@@ -1,8 +1,7 @@
 const request = require("request");
-const config = require("../config.json");
 
 module.exports = function(client) {
-	if (!config.blessed_channel) {
+	if (!client.config.blessed_channel) {
 		console.error("Error: Missing blessed_channel config!");
 		return;
 	}
@@ -25,18 +24,18 @@ module.exports = function(client) {
 
 			client.blessed_hook.send({
 				username: "BlessedBot",
-				avatarURL: config.blessed_avatar,
+				avatarURL: client.config.blessed_avatar,
 				embeds: [embed]
 			});
 		});
 	}
 
 	client.once("ready", () => {
-		client.channels.fetch(config.blessed_channel).then((channel) => {
+		client.channels.fetch(client.config.blessed_channel).then((channel) => {
 			channel.fetchWebhooks().then(hooks => {
 				let hook = hooks.find(val => val.owner == client.user);
 				if (!hook) {
-					channel.createWebhook("BlessedBot", config.blessed_avatar).then(newHook => {
+					channel.createWebhook("BlessedBot", client.config.blessed_avatar).then(newHook => {
 						client.blessed_hook = newHook;
 						console.log("Created new relay webhook.");
 					});
